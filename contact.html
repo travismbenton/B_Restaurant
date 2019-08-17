@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+Name: Travis Benton
+Date Created: Aug 17th, 2019
+Most recent revision:
+-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>B_S&G Contact Us</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+
+<!--Head Area Completed-->
+<!--Body -->
+
+  <body>
+    <main>
+      <h1>Smoked & Grilled</h1>
+      <hr>
+      <p><a href="index.html" target="_blank">Home</a>  <a href="menu.html" target="_blank">Menu</a>  <a href="contact.html" target="_blank">Contact Us</a></p>
+      <hr>
+
+      <form action="index.html" method="post">
+
+        <label for="fullName">Name:</label>
+        <input type="text" name="fullName" id="fullName"> <br><br>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email"> <br><br>
+        <label for="">Phone:</label>
+        <input type="text" name="phone" id="phone"> <br><br>
+
+        <label for="inquiry">Reason for Inquiry:</label>
+        <select class="" name="inquiry" id="inquiry">
+          <option value="catering" selected>Catering</option>
+          <option value="default">Private Party</option>
+          <option value="feedback">Feedback</option>
+          <option value="other">Other</option>
+        </select> <br><br>
+
+        <label for="info">Additional Information:</label>
+        <textarea name="info" id="info"></textarea> <br><br>
+
+          <label for="visit">Have you been to the restaurant?</label>
+          <input type="radio" name="visit" value="no" id="choice1" checked>
+          <label for="choice1">No</label>
+          <input type="radio" name="visit" value="yes" id="choice2">
+          <label for="choice2">Yes</label> <br><br>
+
+          <label for="contact">Best days to contact you:</label>
+          <input type="checkbox" name="contact" value="m" id="monday">
+          <label for="monday">M</label>
+          <input type="checkbox" name="contact" value="t" id="tuesday">
+          <label for="tuesday">T</label>
+          <input type="checkbox" name="contact" value="w" id="wednesday">
+          <label for="wednesday">W</label>
+          <input type="checkbox" name="contact" value="th" id="thursday">
+          <label for="thursday">Th</label>
+          <input type="checkbox" name="contact" value="f" id="friday">
+          <label for="friday">F</label> <br><br>
+
+        <input type="submit" name="submit" value="Send Request">
+
+      </form>
+
+      <hr>
+      <footer>
+        <p>1222 SW 15th Ave Fort Lauderdale, FL 32323</p>
+        <p>(305) 445-4545</p>
+      </footer>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> 
+
+  </body>
+</html>
