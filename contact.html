@@ -1,75 +1,186 @@
 <!DOCTYPE html>
 <!--
 Name: Travis Benton
-Date Created: Aug 17th, 2019
+Date Created: Aug 9th, 2019
 Most recent revision:
 -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
-    <title>B_S&G Contact Us</title>
-    <link rel="stylesheet" href="styles/normalize.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>S&G Contact Us</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!--Internal style sheet -->
+    <link rel="stylesheet" href="styles/restaurantStyle.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <style>
-
-    </style>
+      header, footer {
+        text-align: center;
+      }
+      body {
+        background-color: white;
+      }
+      label {
+        font-weight: bold;
+        text-align: right;
+      }
       
+      
+      .form-group {
+        width: 85%;        
+      }
+
+      
+      .form-button {
+          border: 1px dotted red;     
+      }
+      
+      
+    </style>
   </head>
 
-<!--Head Area Completed-->
-<!--Body -->
+  <body>  
 
-  <body>
-    <main>
-      <h1>Smoked & Grilled</h1>
+    <header>
+        <h1>Smoked & Grilled</h1>
+    </header>
+
+    <main>      
       <hr>
-      <p><a href="index.html" target="_blank">Home</a>  <a href="menu.html" target="_blank">Menu</a>  <a href="contact.html" target="_blank">Contact Us</a></p>
+      <nav>
+        <p><a class="btn badge-pill" href="index.html">
+            <img src="iconsPng/png/home-3x.png" alt="">
+        </a>  <a class="btn badge-pill" href="menu.html">Menu</a>  <a class="btn badge-pill" href="contact.html" target=>Contact Us</a></p>
+      </nav>
+      
       <hr>
 
-      <form action="index.html" method="post">
+      <section class="container-fluid">
 
-        <label for="fullName">Name:</label>
-        <input type="text" name="fullName" id="fullName"> <br><br>
-        <label for="email">Email:</label>
-        <input type="text" name="email" id="email"> <br><br>
-        <label for="">Phone:</label>
-        <input type="text" name="phone" id="phone"> <br><br>
+        <div class="col">
 
-        <label for="inquiry">Reason for Inquiry:</label>
-        <select class="" name="inquiry" id="inquiry">
-          <option value="catering" selected>Catering</option>
-          <option value="default">Private Party</option>
-          <option value="feedback">Feedback</option>
-          <option value="other">Other</option>
-        </select> <br><br>
+    <!--  /// FORM BEGINNING \\\  -->      
 
-        <label for="info">Additional Information:</label>
-        <textarea name="info" id="info"></textarea> <br><br>
+        <form class="needs-validation">
 
-          <label for="visit">Have you been to the restaurant?</label>
-          <input type="radio" name="visit" value="no" id="choice1" checked>
-          <label for="choice1">No</label>
-          <input type="radio" name="visit" value="yes" id="choice2">
-          <label for="choice2">Yes</label> <br><br>
+          <div class="form-group row">
+            <label for="validationCustom01" class="col-sm col-form-label">Name:</label> <!--Distance of Label to Input-->
+            <div class="col-sm"> <!--Adjust the size of the Input box-->
+              <input type="text" class="form-control is-valid" id="validationCustom01" placeholder="Name" required>
+              <div class="valid-feedback">
+                  Name is valid!
+              </div>                   
+            </div>
+          </div>
 
-          <label for="contact">Best days to contact you:</label>
-          <input type="checkbox" name="contact" value="m" id="monday">
-          <label for="monday">M</label>
-          <input type="checkbox" name="contact" value="t" id="tuesday">
-          <label for="tuesday">T</label>
-          <input type="checkbox" name="contact" value="w" id="wednesday">
-          <label for="wednesday">W</label>
-          <input type="checkbox" name="contact" value="th" id="thursday">
-          <label for="thursday">Th</label>
-          <input type="checkbox" name="contact" value="f" id="friday">
-          <label for="friday">F</label> <br><br>
+          <div class="form-group row">
+            <label for="validationCustom02" class="col-sm col-form-label">Email:</label>                            
+            <div class="col-sm">
+              <input type="email" class="form-control is-valid" id="validationCustom02" placeholder="joe@Email.com" required>
+              <div class="valid-feedback">
+                  Email is valid!
+              </div>              
+            </div>
+          </div>
 
-        <input type="submit" name="submit" value="Send Request">
+          <div class="form-group row">
+            <label for="validationCustom03" class="col-sm col-form-label">Phone:</label>
+            <div class="col-sm">
+              <input type="number" class="form-control is-valid" id="validationCustom03" placeholder="Phone" required>
+              <div class="valid-feedback">
+                  Phone is valid!
+              </div> 
+            </div>
+          </div>
 
-      </form>
+          <div class="form-group row">
+            <label for="InputInquiry" class="col-sm col-form-label">Reason for Inquiry:</label>
+            <div class="col-sm">
+              <select class="form-control" id="InputInquiry">
+                <option selected>Catering</option>
+                <option value="1">Private Party</option>
+                <option value="2">Feedback</option>
+                <option value="3">Other</option>
+              </select>
+            </div>   
+          </div>
+
+          <div class="form-group row">
+            <label for="inputInfo" class="col-sm col-form-label">Additional Information:</label>
+            <div class="col-sm">
+              <textarea class="form-control" id="inputInfo" placeholder="Notes"></textarea>              
+            </div>
+          </div>
+
+          <!--Radio-->
+
+          <div class="form-group row">
+            <label for="inputInfo" class="col-sm pt-0 col-form-label">Restaurant Visit?</label>
+            <div class="col-sm">
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">No</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Yes</label>
+                </div>
+
+            </div>
+          </div>  
+
+          <!--Check Box-->          
+          
+          <div class="form-group row">
+            <label for="inputInfo" class="col-sm pt-0 col-form-label">Contact Availability:</label>            
+            <div class="col-sm">
+
+              <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                      <label class="form-check-label" for="inlineCheckbox1">M</label>
+              </div>
+            
+              <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                      <label class="form-check-label" for="inlineCheckbox2">T</label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                      <label class="form-check-label" for="inlineCheckbox3">W</label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option4">
+                      <label class="form-check-label" for="inlineCheckbox2">Th</label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+                      <label class="form-check-label" for="inlineCheckbox2">F</label>
+              </div>
+
+            </div>
+          </div>
+          
+          <!--Submit Button-->
+
+          <div class="form-group row">
+              <label for="inputName" class="col-sm col-form-label"></label>
+            <div class="col-sm">
+              <button type="submit" class="btn btn-primary">Send Request</button>
+            </div>
+          </div>
+
+        </form> <!--  /// FORM END \\\  --> 
+
+        </div>
+
+      </section>
+
+
+   </main>  
 
       <hr>
       <footer>
@@ -77,11 +188,10 @@ Most recent revision:
         <p>(305) 445-4545</p>
       </footer>
 
-    </main>
+    
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> 
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
